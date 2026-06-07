@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio | Nhập môn Công nghệ số & AI</title>
+    <style>
+        :root {
+            --primary-color: #1b4332;
+            --secondary-color: #2d6a4f;
+            --accent-color: #40916c;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #2b2d42;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav ul li a {
+            color: #d8f3dc;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: white;
+        }
+
+        /* Container & Layout */
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 3rem;
+            border-top: 5px solid var(--secondary-color);
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Info Grid */
+        .grid-profile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .card-info {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        blockquote {
+            background: #e8f5e9;
+            border-left: 5px solid var(--accent-color);
+            margin: 1.5rem 0;
+            padding: 1rem 1.5rem;
+            font-style: italic;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Bài tập Styles */
+        .exercise-block {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .exercise-block h3 {
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .badge {
+            background: var(--primary-color);
+            color: white;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+        }
+
+        .img-placeholder {
+            background: #e2e8f0;
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border: 1px dashed #cbd5e1;
+        }
+
+        /* Table Style */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f5f9;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 5rem;
+        }
+
+        @media (max-width: 768px) {
+            .grid-profile {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav ul {
+                margin-top: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">🌐 Digital Portfolio</div>
+            <ul>
+                <li><a href="#trang-chu">Trang Chủ</a></li>
+                <li><a href="#du-an">Các Bài Tập</a></li>
+                <li><a href="#tong-ket">Tổng Kết</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <section id="trang-chu">
+            <h1>Xin chào, Tôi là [Nguyễn Văn A] 👋</h1>
+            <p>Chào mừng thầy cô và các bạn đến với Không gian Hồ sơ năng lực Kỹ thuật số (Digital Portfolio) - Nơi phản ánh trọn vẹn hành trình tiếp cận làn sóng công nghệ hiện đại.</p>
+            
+            <div class="grid-profile">
+                <div class="card-info">
+                    <h3>👤 Thông Tin Cá Nhân</h3>
+                    <p><strong>Họ và tên:</strong> [Nguyễn Văn A]</p>
+                    <p><strong>Mã số sinh viên:</strong> [25022431]</p>
+                    <p><strong>Ngành học:</strong> [Kinh doanh Quốc tế / Công nghệ thông tin / ...]</p>
+                    <p><strong>Sở thích:</strong> Khám phá giải pháp công nghệ mới, ứng dụng AI tối ưu hóa hiệu suất học tập và làm việc nhóm trực tuyến.</p>
+                </div>
+                <div class="card-info">
+                    <h3>🎯 Mục Tiêu Học Tập & Phát Triển</h3>
+                    <p><strong>Mục tiêu ngắn hạn:</strong> Làm chủ các tư duy nền tảng về dữ liệu số, thành thạo kỹ thuật Prompt Engineering và thiết lập quy trình cộng tác từ xa hiệu quả.</p>
+                    <p><strong>Định hướng dài hạn:</strong> Trở thành một nhân sự chất lượng cao có năng lực thích ứng số, biết ứng dụng AI tạo sinh một cách thông minh và có trách nhiệm để giải quyết các bài toán thực tế của doanh nghiệp.</p>
+                </div>
+            </div>
+
+            <h3>📌 Mục Tiêu Của Portfolio</h3>
+            <blockquote>
+                "Portfolio kỹ thuật số này được xây dựng nhằm hệ thống hóa, lưu trữ và minh chứng một cách trực quan, khoa học cho toàn bộ các sản phẩm thực hành từ Bài 1 đến Bài 6 của môn học. Đây không đơn thuần là một bài tập lớn, mà còn là công cụ chuyên nghiệp để tôi tự đánh giá năng lực công nghệ và định hình tư duy phản biện trong kỷ nguyên trí tuệ nhân tạo."
+            </blockquote>
+        </section>
+
+
+        <section id="du-an">
+            <h2>💼 Hệ Thống Hóa Kế Quả Bài Tập Thành Phần</h2>
+            <p>Dưới đây là tiến trình biên tập chi tiết các sản phẩm kỹ năng số đã hoàn thiện trong suốt học kỳ qua:</p>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 1: Quản lý tệp và thư mục <span class="badge">Mức 4 - Khoa học & Sáng tạo</span></h3>
+                <p><strong>Mục tiêu:</strong> Thiết lập hệ thống lưu trữ dữ liệu khoa học, tối ưu hóa tốc độ tìm kiếm và làm việc.</p>
+                <p><strong>Tóm tắt quá trình & Phân tích sâu sắc:</strong> Tôi đã áp dụng nguyên lý phân loại đa tầng kết hợp quy tắc đặt tên nhất quán <code>[Năm_HọcKỳ]_[MãMôn]_[TênTàiLiệu]_[PhiênBản]</code>. Việc này giúp loại bỏ hoàn toàn tình trạng thất lạc tệp tin, đảm bảo tính liên tục của dữ liệu khi làm việc đa nền tảng đám mây.</p>
+                
+                <img class="img-placeholder" src="https://via.placeholder.com/800x400.png?text=Anh+Chup+Cay+Thu+Muc+May+Tinh+Cua+Ban" alt="Cấu trúc cây thư mục khoa học">
+                <p><i>Hình 1: Minh họa cấu trúc cây thư mục tối ưu hóa dữ liệu học tập trên máy tính cá nhân.</i></p>
+            </div>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 2: Tìm kiếm & Đánh giá thông tin học thuật <span class="badge">Mức 4 - Trên 4 Toán tử nâng cao</span></h3>
+                <p><strong>Mục tiêu:</strong> Khai thác hiệu quả nguồn tài nguyên nghiên cứu chất lượng cao, hạn chế rác thông tin.</p>
+                <p><strong>Chiến lược tìm kiếm nâng cao:</strong> Thay vì tìm kiếm thông thường, tôi sử dụng tổ hợp linh hoạt các toán tử nâng cao để khoanh vùng tài liệu gốc.</p>
+                <p><strong>Ví dụ câu lệnh thực tế đã dùng:</strong> <code>"artificial intelligence in education" site:.edu filetype:pdf after:2024 -"commercial"</code></p>
+                
+                <img class="img-placeholder" src="https://via.placeholder.com/800x400.png?text=Anh+Chup+Minh+Hoa+Ket+Qua+Tim+Kiem+Toan+Tu" alt="Minh chứng sử dụng toán tử tìm kiếm">
+                
+                <p><strong>Bảng đánh giá nguồn tin học thuật:</strong></p>
+                <table>
+                    <tr>
+                        <th>Tiêu chí đánh giá</th>
+                        <th>Phân tích chuyên sâu</th>
+                    </tr>
+                    <tr>
+                        <td>Tính cập nhật (Currency)</td>
+                        <td>Tài liệu được giới hạn xuất bản từ năm 2024 đến nay, đảm bảo các số liệu về AI không bị lạc hậu.</td>
+                    </tr>
+                    <tr>
+                        <td>Độ uy tín (Authority)</td>
+                        <td>Bộ lọc dữ liệu từ tên miền <code>.edu</code> thuộc các tổ chức đại học uy tín trên thế giới.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 3: Viết Prompt hiệu quả cho tác vụ học tập <span class="badge">Mức 4 - Kỹ thuật Prompt Engineering chuyên sâu</span></h3>
+                <p><strong>Mục tiêu:</strong> Ứng dụng kỹ thuật Prompt nâng cao để biến AI thành một trợ lý học tập đắc lực.</p>
+                
+                <p><strong>Bảng so sánh cơ chế hoạt động và kết quả đầu ra:</strong></p>
+                <table>
+                    <tr>
+                        <th style="width: 50%;">❌ Prompt Ban Đầu (Sơ khai)</th>
+                        <th style="width: 50%;">✅ Prompt Cải Tiến (Áp dụng cấu trúc Vai trò - Bối cảnh - Yêu cầu)</th>
+                    </tr>
+                    <tr>
+                        <td>"Hãy tóm tắt cho tôi cuốn sách về phương pháp học tập."</td>
+                        <td>"Bạn là một chuyên gia tâm lý giáo dục xuất sắc. Bối cảnh: Tôi là sinh viên năm nhất đang gặp khó khăn trong quản lý thời gian. Nhiệm vụ: Tóm tắt 3 phương pháp cốt lõi từ chương 2 cuốn sách 'Atomic Habits'. Định dạng đầu ra: Dạng danh sách kèm ví dụ áp dụng cụ thể cho sinh viên."</td>
+                    </tr>
+                    <tr>
+                        <td><i>Kết quả: Chữ dài, chung chung, không đúng trọng tâm nhu cầu thực tế.</i></td>
+                        <td><i>Kết quả: Đầu ra cực kỳ sắc bén, có tính hành động cao, tối ưu đúng vấn đề của người dùng.</i></td>
+                    </tr>
+                </table>
+
+                <img class="img-placeholder" src="https://via.placeholder.com/800x400.png?text=Anh+Chup+So+Sanh+Giao-Dien-Chat-AI" alt="Minh chứng cải tiến Prompt">
+            </div>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 4: Hợp tác trực tuyến cho dự án nhóm <span class="badge">Mức 4 - Tối ưu hóa quy trình làm việc</span></h3>
+                <p><strong>Mục tiêu:</strong> Sử dụng các công cụ số để đồng bộ hóa, quản lý tiến độ và phân chia công việc trong nhóm một cách minh bạch.</p>
+                <p><strong>Phân tích cách tối ưu quy trình:</strong> Nhóm chúng tôi đã ứng dụng nền tảng [Trello/Notion] để thiết lập Kanban board. Mọi tác vụ đều được gán nhãn trạng thái (To-do, In Progress, Review, Done), đính kèm deadline và người chịu trách nhiệm rõ ràng, loại bỏ tình trạng đùn đẩy công việc.</p>
+                
+                <img class="img-placeholder" src="https://via.placeholder.com/800x400.png?text=Anh+Chup+Bang+Quan+Ly+Cong+Viec+Nhom" alt="Minh chứng hợp tác trực tuyến">
+            </div>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 5: Sáng tạo nội dung số với AI tạo sinh <span class="badge">Mức 4 - Sản phẩm hoàn thiện chuyên nghiệp</span></h3>
+                <p><strong>Mục tiêu:</strong> Đồng sáng tạo với AI để tạo ra sản phẩm truyền thông kỹ thuật số ấn tượng.</p>
+                <p><strong>Quy trình sản xuất tích hợp AI:</strong> Tôi đã sử dụng AI hỗ trợ lên dàn ý nội dung kịch bản phát triển ý tưởng, sau đó kết hợp với công cụ thiết kế đồ họa để căn chỉnh bố cục thị giác độc lập, đảm bảo tính thẩm mỹ cao.</p>
+                
+                <img class="img-placeholder" src="https://via.placeholder.com/800x400.png?text=Hinh+Anh+Hoac+Banner+San+Pham+Truyen+Thong" alt="Sản phẩm nội dung số">
+                <p><i>Hình 2: Sản phẩm truyền thông được hoàn thiện dưới sự trợ lực thông minh từ các công cụ AI tạo sinh.</i></p>
+            </div>
+
+            <div class="exercise-block">
+                <h3>Nhiệm vụ 6: Sử dụng AI có trách nhiệm <span class="badge">Mức 4 - Tư duy phản biện & Giải pháp đạo đức</span></h3>
+                <p><strong>Mục tiêu:</strong> Định hình ranh giới đạo đức cá nhân để khai thác AI bền vững, liêm chính.</p>
+                
+                <p><strong>Bộ nguyên tắc cá nhân về sử dụng AI có trách nhiệm (7 Điều cốt lõi):</strong></p>
+                <ol>
+                    <li><strong>Nguyên tắc Xác thực thông tin:</strong> Tuyệt đối không dùng trực tiếp dữ liệu từ AI mà không kiểm chứng chéo với các nguồn học thuật đáng tin cậy (tránh hiện tượng ảo giác AI).</li>
+                    <li><strong>Nguyên tắc Liêm chính học thuật:</strong> AI chỉ đóng vai trò là trợ lý gợi ý ý tưởng và chỉnh sửa cấu trúc văn bản; không đạo văn hoặc bắt AI viết hộ 100% bài luận.</li>
+                    <li><strong>Nguyên tắc Bảo mật dữ liệu:</strong> Không tải các dữ liệu cá nhân nhạy cảm, bí mật nội bộ nhóm hoặc thông tin chưa công bố lên các mô hình AI công cộng.</li>
+                    <li><strong>Tôn trọng quyền sở hữu trí tuệ:</strong> Công khai minh bạch việc có sử dụng AI trợ giúp trong các sản phẩm của mình.</li>
+                    <li><strong>Tránh thiên kiến độc hại:</strong> Luôn nhận thức phân tích tính đa chiều của thông tin đầu ra từ AI nhằm tránh các định kiến về giới tính, sắc tộc hay tôn giáo.</li>
+                    <li><strong>Tập trung phát triển năng lực gốc:</strong> Không lạm dụng AI làm suy giảm tư duy phản biện và khả năng viết độc lập của bản thân.</li>
+                    <li><strong>Cập nhật liên tục:</strong> Chủ động theo dõi các chính sách, điều khoản đạo đức công nghệ mới nhất của nhà trường và xã hội.</li>
+                </ol>
+            </div>
+        </section>
+
+
+        <section id="tong-ket">
+            <h2>📈 Tổng Kết & Đánh Giá Bản Thân</h2>
+            <p><strong>Phân tích sâu sắc sự trưởng thành sau môn học:</strong></p>
+            <p>Trải qua hành trình học tập, tôi nhận ra công nghệ số và trí tuệ nhân tạo không phải là một thế lực thay thế con người, mà là một đòn bẩy vĩ đại cho những ai biết làm chủ nó. Việc tự tay lập trình trang Portfolio bằng mã nguồn HTML/CSS này kết hợp đưa lên GitHub Pages là một minh chứng sống động cho sự bứt phá vượt bậc về giới hạn kỹ năng số của chính tôi.</p>
+            
+            <p><strong>Những thách thức đã vượt qua:</strong></p>
+            <p>Trong quá trình thực hiện, tôi từng gặp khó khăn trong việc tối ưu hóa câu lệnh Prompt và quản lý xung đột code khi đẩy lên GitHub lần đầu. Tuy nhiên, bằng cách áp dụng tư duy kỹ thuật thử - sai có hệ thống, phối hợp thảo luận với cộng đồng học tập, tôi đã giải quyết thành công.</p>
+            
+            <p><strong>Bài học kinh nghiệm & Tầm nhìn tương lai:</strong></p>
+            <p>Bài học lớn nhất tôi đúc rút được là: "Tư duy công nghệ quan trọng hơn bản thân công cụ". Trong tương lai, tôi sẽ liên tục duy trì thói quen tổ chức dữ liệu khoa học, cập nhật thêm các kỹ thuật công nghệ mới để sẵn sàng thích ứng linh hoạt và tạo ra nhiều giá trị vượt trội cho chuyên ngành học tập của mình.</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>© 2026 [Nguyễn Văn A] | Mã số sinh viên: [25022431]. All Rights Reserved.</p>
+        <p>Hồ sơ năng lực số được xây dựng hoàn toàn bằng mã nguồn HTML & CSS thuần. Hosted tại GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
